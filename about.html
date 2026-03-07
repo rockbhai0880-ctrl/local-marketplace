@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalMarket - About</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Local<span>Market</span></h2>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="dashboard.html"><i class="fas fa-home"></i> Home</a>
+                <a href="profile.html"><i class="fas fa-user"></i> My Profile</a>
+                <a href="about.html" class="active"><i class="fas fa-info-circle"></i> About</a>
+                <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+            
+            <div class="mobile-menu-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="dashboard.html">Home</a>
+            <a href="profile.html">My Profile</a>
+            <a href="about.html" class="active">About</a>
+            <a href="#" id="mobileLogout">Logout</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="about">
+        <div class="container">
+            <!-- About Section -->
+            <section class="about-section">
+                <h1>About LocalMarket</h1>
+                <div class="about-content">
+                    <div class="about-card">
+                        <i class="fas fa-bullseye"></i>
+                        <h3>Our Mission</h3>
+                        <p>LocalMarket aims to connect buyers and sellers within local communities, making it easy and safe to buy and sell second-hand items. We believe in promoting sustainable consumption by giving items a second life.</p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <i class="fas fa-handshake"></i>
+                        <h3>How It Works</h3>
+                        <p>Sellers can post ads for free, include detailed product information and contact details. Buyers can browse, search, and contact sellers directly via phone to arrange meetings and purchases.</p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Safety Tips</h3>
+                        <p>Always meet in public places, bring a friend if possible, inspect items before paying, and never share financial information. Your safety is our priority.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Comments Section -->
+            <section class="comments-section">
+                <h2>Leave a Comment</h2>
+                <form id="commentForm" class="comment-form">
+                    <div class="form-group">
+                        <label for="commentName">Your Name</label>
+                        <input type="text" id="commentName" placeholder="Enter your name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="commentEmail">Your Email</label>
+                        <input type="email" id="commentEmail" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="commentMessage">Your Comment</label>
+                        <textarea id="commentMessage" rows="4" placeholder="Write your comment..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Submit Comment</button>
+                </form>
+                
+                <div class="comments-list" id="commentsList">
+                    <h3>Recent Comments</h3>
+                    <!-- Comments will be loaded here -->
+                    <div class="loading">Loading comments...</div>
+                </div>
+            </section>
+            
+            <!-- Contact Section -->
+            <section class="contact-section">
+                <h2>Contact the Owner</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>support@localmarket.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Market Street, City, State 12345</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Business Hours</h4>
+                            <p>Monday - Friday: 9am - 6pm</p>
+                            <p>Saturday: 10am - 4pm</p>
+                            <p>Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

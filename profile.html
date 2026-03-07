@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalMarket - My Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar with Logo on Left, Menu on Right -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Local<span>Market</span></h2>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="dashboard.html"><i class="fas fa-home"></i> Home</a>
+                <a href="profile.html" class="active"><i class="fas fa-user"></i> Profile</a>
+                <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+                <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+            
+            <div class="mobile-menu-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="dashboard.html">Home</a>
+            <a href="profile.html" class="active">Profile</a>
+            <a href="about.html">About</a>
+            <a href="#" id="mobileLogout">Logout</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="profile">
+        <div class="container">
+            <!-- Profile Header with Editable Info -->
+            <div class="profile-header" id="profileHeader">
+                <!-- Content will be loaded by JavaScript -->
+                <div class="loading"><i class="fas fa-spinner fa-spin"></i> Loading profile...</div>
+            </div>
+            
+            <!-- Post Ad Section -->
+            <div class="post-ad-section">
+                <h2><i class="fas fa-plus-circle"></i> Post New Ad</h2>
+                <form id="postAdForm" class="post-ad-form">
+                    <div class="form-group">
+                        <label for="adTitle">Product Title</label>
+                        <input type="text" id="adTitle" placeholder="e.g., iPhone 12" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="adPrice">Price ($)</label>
+                            <input type="number" id="adPrice" placeholder="299" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="adCategory">Category</label>
+                            <select id="adCategory" required>
+                                <option value="">Select category</option>
+                                <option value="Electronics">Electronics</option>
+                                <option value="Furniture">Furniture</option>
+                                <option value="Clothing">Clothing</option>
+                                <option value="Vehicles">Vehicles</option>
+                                <option value="Books">Books</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="adCondition">Condition</label>
+                            <select id="adCondition" required>
+                                <option value="">Select condition</option>
+                                <option value="Brand New">Brand New</option>
+                                <option value="Like New">Like New</option>
+                                <option value="Good">Good</option>
+                                <option value="Fair">Fair</option>
+                                <option value="For Parts">For Parts/Not Working</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="adLocation">Location</label>
+                            <input type="text" id="adLocation" placeholder="City, Area" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="adDescription">Description</label>
+                        <textarea id="adDescription" rows="4" placeholder="Describe your product..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="adImage">Product Image</label>
+                        <input type="file" id="adImage" accept="image/*">
+                        <small>Optional - if no image, a placeholder will be used</small>
+                    </div>
+                    
+                    <button type="submit" class="auth-btn"><i class="fas fa-cloud-upload-alt"></i> Post Ad</button>
+                </form>
+            </div>
+            
+            <!-- My Ads Section -->
+            <div class="my-ads-section">
+                <h2><i class="fas fa-boxes"></i> My Product Ads</h2>
+                <div class="my-ads-grid" id="myAdsGrid">
+                    <!-- User's ads will be loaded here -->
+                    <div class="loading"><i class="fas fa-spinner fa-spin"></i> Loading your ads...</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Hidden file input for avatar upload -->
+    <input type="file" id="avatarUpload" accept="image/*" style="display: none;">
+
+    <script src="app.js"></script>
+</body>
+</html>
